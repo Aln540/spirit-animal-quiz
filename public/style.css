@@ -1,0 +1,353 @@
+:root {
+    --primary-color: #4a4e69;
+    --secondary-color: #9a8c98;
+    --background-color: #f2e9e4;
+    --text-color: #22223b;
+    --card-bg: #ffffff;
+    --accent-color: #c9ada7;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Top navigation for policy pages */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.nav-home {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-home:hover {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 3rem 3rem 2.5rem 3rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--secondary-color);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+#quiz-start > p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.quiz-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .quiz-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .feature {
+        padding: 1.5rem 1rem;
+    }
+}
+
+.feature {
+    padding: 2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature strong {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.feature p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.quiz-note {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-top: 1.5rem !important;
+    margin-bottom: 0 !important;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 78, 105, 0.3);
+    margin: 1rem 0;
+}
+
+button:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(74, 78, 105, 0.4);
+}
+
+.hidden {
+    display: none !important;
+}
+
+#quiz-content h2 {
+    margin-bottom: 2rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.option-btn {
+    background-color: var(--background-color);
+    border: 2px solid var(--secondary-color);
+    color: var(--text-color);
+    width: 100%;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+#quiz-result h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+#quiz-result .title {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+#quiz-result p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.result-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    background-color: var(--accent-color);
+}
+
+.share-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.retake-btn {
+    background-color: var(--secondary-color);
+}
+
+.retake-btn:hover {
+    background-color: var(--primary-color);
+}
+
+footer {
+    margin-top: 2rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.footer-nav {
+    margin-bottom: 1rem;
+}
+
+.footer-nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Policy pages styling */
+.policy-content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.policy-content h2 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.policy-content ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.policy-content li {
+    margin-bottom: 0.5rem;
+}
+
+.policy-content a:not(.btn-link) {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.policy-content a:not(.btn-link):hover {
+    text-decoration: underline;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-link:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    color: white !important;
+    text-decoration: none;
+}
+
+/* Start Over Button */
+.start-over-container {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.start-over-btn {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    margin: 0;
+    box-shadow: none;
+    font-weight: 500;
+}
+
+.start-over-btn:hover {
+    background: rgba(74, 78, 105, 0.1);
+    color: var(--primary-color);
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* Animation for content changes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+} 
